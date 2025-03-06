@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romantic Photobooth</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hearts-container"></div>
+
+    <h1 class="app-title"><span>Romantic PhotoBooth</span></h1>
+
+    <div class="container">
+      <div class="camera-section">
+        <div class="camera-container">
+          <div class="camera-lens"></div>
+          <div class="camera-overlay"></div>
+          <div class="camera-placeholder">Kamera dimatikan</div>
+          <video id="cameraVideo" autoplay playsinline></video>
+          <div id="countdown"></div>
+          <div class="flash"></div>
+        </div>
+        <div class="camera-controls">
+          <button id="toggleCamera" class="btn">Nyalakan Kamera</button>
+          <button id="takePhoto" class="btn btn-camera" disabled>
+            Ambil Foto
+          </button>
+          <button id="downloadPhotos" class="btn btn-download" disabled>
+            Download
+          </button>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <div class="gallery-empty">Belum ada foto yang diambil</div>
+      </div>
+
+      <button id="showGallery" class="btn gallery-mobile-btn">
+        Lihat Galeri
+      </button>
+    </div>
+
+    <div class="gallery-popup">
+      <div class="gallery-popup-content">
+        <button class="close-popup">×</button>
+        <h2 class="popup-title">Galeri Foto</h2>
+        <div class="popup-photos">
+          <div class="gallery-empty">Belum ada foto yang diambil</div>
+        </div>
+        <div class="popup-footer">
+          <button id="popupDownload" class="btn btn-download">Download</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
