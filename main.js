@@ -269,3 +269,26 @@
 
       // Call on page load
       window.addEventListener("load", createHearts);
+
+      // js popup
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("welcomePopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("welcomePopup");
+  const closeBtn = document.getElementById("closePopup");
+  const body = document.body;
+
+  // Tambahkan kelas 'popup-active' untuk efek redup
+  body.classList.add("popup-active");
+
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+    body.classList.remove("popup-active"); // Hapus efek redup
+  });
+});
